@@ -13,8 +13,9 @@ import { SkillsComponent } from './components/home/skills/skills.component';
 import { ContactComponent } from './components/home/contact/contact.component';
 import { ProgressBarComponent } from './assets/components/progress-bar/progress-bar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditUserModalComponent } from './assets/components/edit-user-modal/edit-user-modal.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,16 @@ import { EditUserModalComponent } from './assets/components/edit-user-modal/edit
     ProgressBarComponent,
     DashboardComponent,
     EditUserModalComponent,
-   
+    FooterComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

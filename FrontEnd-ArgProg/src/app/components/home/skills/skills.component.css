@@ -22,7 +22,6 @@
   }
 
  /* estilo de grafico circular */
-
  @keyframes rellenar{
   to{
     stroke-dasharray: var(--porcentaje) 100;
@@ -30,11 +29,8 @@
 }
 
 .body-graph{
-  align-items: center;
-  display:flex;
+  display: flex;
   gap: 30px;
-  margin: 30px;
-
 }
 
 .porcentajes{
@@ -58,11 +54,22 @@ circle{
   transform: rotate(-90deg);
   transform-origin: 50%;
   stroke-dasharray: 100 100;
-  stroke: #AAA;
+  stroke: #ece9e9;
+
+
 }
 circle:nth-child(2){ /* el segundo círculo, es el que se ve por encima del anterior y debe tener el color mas intenso y el area del porcentaje */
   stroke: var(--color);
   stroke-dasharray: 0 100;
-  animation: rellenar 1.92s linear forwards;
+  animation: rellenar 4.90s linear forwards;
 }
+
+.card .bg-pf{
+  background-color: rgb(20, 20, 20); ;
+}
+
+span, p {
+  font-family: 'Bakbak One', cursiv;
+  color: azure;
   
+}

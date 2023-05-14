@@ -1,51 +1,81 @@
-<div>
-    <div class="left-part">
-      <i class="fa fa-anchor"></i>
-      <h1>BIENVENIDO A <strong>TUWALLET</strong></h1>
-      <p>La nueva plataforma para comercio entre personas</p>
-    
-    </div>
+<div class="bg-dark full">
+
+  <div class="left-part">
+    <i class="fa fa-anchor"></i>
+    <h1>BIENVENIDO A <strong>MI PORTFOLIO</strong></h1>
+    <p>La nueva plataforma para comercio entre personas</p>
+
+  </div>
   <div class="d-flex justify-content-center align-items-center">
     <div class="col-lg-3 mt-2">
-  
+
       <form action="">
         <div class="">
           <div class="container justify-content-center align-items-center">
             <i class="fas fa-pencil-alt"></i>
             <div class="text-center mb-2">
-            <h2><b>REGISTRATE AQUI</b></h2>
-          </div>
+              <h2><b>REGISTRATE AQUI</b></h2>
+            </div>
             <div class="info">
-                <input class="fname" type="text" name="first_name" [(ngModel)]="dataForm.first_name" placeholder="Nombre" required minlength="4"
-                maxlength="40" required size="10">
-                <input class="fname" type="text" name="last_name" [(ngModel)]="dataForm.last_name" placeholder="Apellido" required minlength="4"
-                maxlength="40" required size="10">
+              <input class="fname" type="text" name="first_name" [(ngModel)]="dataForm.first_name" placeholder="Nombre"
+                required minlength="4" maxlength="40" required size="10">
+              <input class="fname" type="text" name="last_name" [(ngModel)]="dataForm.last_name" placeholder="Apellido"
+                required minlength="4" maxlength="40" required size="10">
               <input type="email" name="email" [(ngModel)]="dataForm.email" placeholder="Email" required>
               <input type="text" name="telephone" [(ngModel)]="dataForm.telephone" placeholder="telefono" required>
-              <input type="password" name="password"[(ngModel)]="dataForm.password" placeholder="Password" required>
-             
+              <input type="password" name="password" [(ngModel)]="dataForm.password" placeholder="Password" required>
+
             </div>
           </div>
-        
-        <div class="checkbox">
-        
-        
- 
-          <input type="checkbox" value="0"[(ngModel)]="dataForm.terms" name="terms" required><span>Acepto todos los
-            terminos y condiciones del <a href="https://www.w3docs.com/privacy-policy">Politica de privacidad.</a></span>
-       
-        </div>
+         
+				<div [ngSwitch]="register">
+					<div *ngSwitchCase="register.error">o</div>
+								 
+				</div>
+
+				<div class="success-container" [ngClass]="{'show': register}" *ngIf="register; else notUpdated" >
+					<div class=" text-center justify-content-center ">
+					  <i class="fa-solid fa-circle-check color-success icon-success"></i>
+					</div>
+					<div class="text-center justify-content-center color-success ">
+					  El usuario ha sido actualizado exitosamente!!
+					</div>
+				  </div>
+				  <ng-template #notUpdated>
+					<div *ngIf="!register" class="success-container" [ngClass]="{'show': !register}" >
+						<div class=" text-center justify-content-center ">
+						  <i class="fa-solid fa-circle-check color-error icon-success"></i>
+						</div>
+						<div class="text-center justify-content-center color-error ">
+						  Error al registrar el usuario, revise los datos proporcionados.!!
+						</div>
+					  </div>
+				  </ng-template>
+          <div class="checkbox">
+
+
+
+            <input type="checkbox" value="0" [(ngModel)]="dataForm.terms" name="terms" required><span>Acepto todos los
+              terminos y condiciones del <a href="https://www.w3docs.com/privacy-policy">Politica de
+                privacidad.</a></span>
+
+          </div>
+	
+     
+
+
+         
+          <button  (click)="sendForm()">Registrarme</button>
       
-        <button (click)="sendForm()">Registrarme</button>
-      </div> 
+        </div>
       </form>
     </div>
-    
-    </div>
-    <div class="d-flex justify-content-center align-items-center btn-group">
-      <a class="btn-item mr-4" href="https://www.w3docs.com/learn-html.html">saber mas</a>
-      <a class="btn-item ml-4" href="/home">volver al home</a>
-    </div>
-    <div><br></div>
-</div>
 
+  </div>
+  <div class="d-flex justify-content-center align-items-center btn-group">
+    <a class="btn-item mr-4" href="https://www.w3docs.com/learn-html.html">saber mas</a>
+    <a class="btn-item ml-4" href="/home">volver al home</a>
+  </div>
+  <div><br></div>
+
+</div>

@@ -4,21 +4,31 @@
 
             <section class="justify-content-center">
                 <!-- <form method="POST" action="http://localhost:1337/login"> -->
-                <form method="GET" action="/dashboard">
+                <form [formGroup]="form" (ngSubmit) ="sendLogin($event)">
                     <br>
 
                     <div class="font-magic">
                         <h1><strong>INICIAR SESION</strong></h1>
                     </div>
                     <div><br></div>
+               
                     <div class="justify-content-center m-side">
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                        <input type="text" class="form-control" formControlName="username" name="username" placeholder="Username"
                             required="" />
+                            <div *ngIf="Username?.errors && Username?.touched"></div>
+                            <p *ngIf="Username?.hasError('required')" class="text-danger">
+                            ingresa tu email en el campo usuario.</p>
+                            <p *ngIf="Username?.hasError('username')" class="text-danger">
+                            formato de email invalido...</p>
                     </div><br>
                     <div class="justify-content-center m-side">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password"
                             required="" />
-
+                            <div *ngIf="Password?.errors && Password?.touched"></div>
+                            <p *ngIf="Password?.hasError('required')" class="text-danger">
+                            debes ingresar el password!</p>
+                            <p *ngIf="Password?.hasError('password')" class="text-danger">
+                            La contraseña debe contener 8 o mas caracteres...</p>
                     </div><br>
                     <div>
                         <button class="btn btn-light a" action="submit"><b> Ingresar</b></button>

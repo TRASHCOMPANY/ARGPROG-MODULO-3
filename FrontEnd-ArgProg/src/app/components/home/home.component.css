@@ -13,11 +13,13 @@
   }
 
   .inicio .img-container {
-      margin-top: 40px;
-      border-radius: 50%;
-      opacity: 1;
-      width: 250px;
-      box-shadow: 4px 4px 20px  rgb(20, 20, 20);
+    margin-top: 40px;
+    border-radius: 50%;
+    opacity: 1;
+    width: 250px;
+    box-shadow: 4px 4px 20px  rgb(20, 20, 20);
+    max-width: 100%;
+    height: auto;
  
   }
 
@@ -40,6 +42,8 @@
     align-items: center;
     font-size: 50px;
     text-shadow: 10px 5px 10px  rgb(20, 20, 20); ;
+    max-width: 100%;
+    height: auto;
   }
   .inicio .about-me .rows{
     background-color: rgb(20, 20, 20);
@@ -88,6 +92,8 @@
     font-family: 'Bakbak One', cursiv;
       font-size: 20px;
       color: #ececec;
+      max-width: 100%;
+    height: auto;
   }
 
   .description .h1{

@@ -1,0 +1,27 @@
+.description .h1{
+    font-family: 'Bakbak One', cursiv;
+      font-size: 50px;
+      color: #ececec;
+  }
+
+  .description {
+    font-family: 'Bakbak One', cursiv;
+      font-size: 20px;
+      color: #ececec;
+  }
+  .about-me{
+    background-color: rgb(20, 20, 20);
+   font-family: 'Modak', cursive;
+    color: #ececec;
+    margin-bottom: 5px;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 10px 5px 10px  rgb(20, 20, 20); ;
+  }
+  
+  .section{
+  
+    background-color:  rgb(20, 20, 20);
+  }
+
+  

@@ -9,12 +9,15 @@ import { User } from 'src/app/models/user';
 })
 export class RegisterComponent implements OnInit {
 
+    public register:any = null
+    public buttonRegisterShow: any
+
     dataForm: User ={
     first_name: '',
     last_name:'',
     email:'',
     password: '',
-    telephone:0,
+    telephone: Number(),
     terms:'true'
      };
 
@@ -24,7 +27,11 @@ export class RegisterComponent implements OnInit {
   }
 
   sendForm(){
-  this.UserService.createUser(this.dataForm)
+  this.UserService.createUser(this.dataForm).subscribe(e=>{console.log("usuario guardado")
+  this.register = true
+  this.buttonRegisterShow = false
+
+}, error =>{this.register= false})
   
   }
 }

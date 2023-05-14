@@ -13,10 +13,12 @@
                 <a class="nav-item nav-link active" href="#"><b> INICIO</b></a>
                 <a class="nav-item nav-link"[routerLink] = "['/home']" fragment="sobremi"><b>SOBRE MI</b></a>
                 <a class="nav-item nav-link"[routerLink] = "['/home']" fragment="experience"><b>CONOCIMIENTOS</b></a>
-                <a class="nav-item nav-link disabled" href="#"><b>PORTFOLIO</b></a>
+                <a class="nav-item nav-link"[routerLink] = "['/home']" fragment="skills"><b>SKILLS</b></a>
             </div>
         </div>
     </nav>
-    <div id="skroll-btn" class="skroll-btn a">
+    <div id="skroll-btn" (click)="scrollTop()" class="skroll-btn a">
         <i class="fa-solid fa-angles-up"></i>
       </div>
+
+   

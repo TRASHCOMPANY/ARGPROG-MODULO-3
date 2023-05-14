@@ -1,130 +1,22 @@
 <section class="section" id="skills">
-    <h1 class="about-me text-center">skills</h1>
-    <div class="container ">
+    <h1 class="about-me text-center">Soft skills</h1>
+    <div class="container text-center align-items-center justify-content-center ">
         <div class="row">
             <div class="col-12 description">
-         <div class="container">
-                <div class="container body-graph">
-                    <div class='porcentajes text-center' style="--porcentaje: 60; --color:rgb(133, 228, 161)">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>68%</span>
-                        bootstrap
-                    </div>
-                    <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>70%</span>
-                        web3.js
-                    </div>
-                    <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>75%</span>
-
-                    </div>
-                    <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>75%</span>
-                    </div>
-                    <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>75%</span>
-                    </div>
-
-                    <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>75%</span>
-                    </div>
-                    <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                        <svg width="150" height="150">
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                        </svg>
-                        <span>75%</span>
-                    </div>
-                </div>
-            </div>
-</div>
-            <div class="col-12 description">
-                <div class="container">
-                    <div class="container body-graph">
-                        <div class='porcentajes text-center' style="--porcentaje: 68; --color:rgb(133, 228, 161)">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
+                <div class="container d-flex ">
+                    <div *ngFor="let skill of skills" class="container body-graph justify-content-center ">
+                        <div class='card-bg-pf porcentajes text-center'
+                            style="--porcentaje: {{skill.percent}}; --color:rgb(133, 228, 161)">
+                            <svg width="150" height="150" viewBox="0 0 150 150" width="auto" height="200">
+                                <circle r="65" cx="50%" cy="50%" pathLength="100" />
+                                <circle r="65" cx="50%" cy="50%" pathLength="100" />
                             </svg>
-                            <span>68%</span>
-                            Ingles
-                        </div>
-                        <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            </svg>
-                            <span>60%</span>
-                            Ingles
-                        </div>
-                        <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            </svg>
-                            <span>65%</span>
-                            Ingles
-                        </div>
-                        <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            </svg>
-                            <span>60%</span>
-
-                        </div>
-                        <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            </svg>
-                            <span>60%</span>
-                            Ingles
-                        </div>
-
-                        <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            </svg>
-                            <span>75%</span>
-                        </div>
-                        <div class='porcentajes text-center' style="--porcentaje: 75; --color:rgb(133, 228, 161) ">
-                            <svg width="150" height="150">
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                                <circle r="65" cx="50%" cy="50%" pathlength="100" />
-                            </svg>
-                            <span>75%</span>
+                            <span>{{skill.percent}}%</span>
+                            <p>{{skill.skill_name}}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
-</section> 
+</section>

@@ -74,14 +74,28 @@
   }
 
   .card-local {
-      border-radius: 5%;
-      background-color: #0F2027;
+    
 
+   
+    width:100px;
+   height:100px;
+      border-radius: 5%;
+      background-color:  rgb(20, 20, 20);
+      margin: 10px;
+
+     
+    
+    
   }
 
   .description {
     font-family: 'Bakbak One', cursiv;
       font-size: 20px;
+      color: #ececec;
+  }
+  .description small{
+    font-family: 'Bakbak One', cursiv;
+      font-size: 15px;
       color: #ececec;
   }
 
@@ -176,3 +190,11 @@ circle:nth-child(2){ /* el segundo círculo, es el que se ve por encima del ante
   transform: scale(1.2);
 
 }
+.a:hover {
+        background-color: rgb(133, 228, 161);
+        border: radius 50%;
+        cursor: pointer;
+        transform: scale(1.1);
+
+    }
+    

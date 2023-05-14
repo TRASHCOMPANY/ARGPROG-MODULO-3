@@ -1,60 +1,69 @@
-
-
-<div class="body">
+<div class="body inicio">
   <div class="row">
     <div class="col-md-3 col-lg-3">
       <div class="widget-small primary coloured-icon">
-        <i class="icon fa fa-btc fa-3x"></i>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-wallet2"
-          viewBox="0 0 16 16">
-          <path
-            d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z" />
-        </svg>
-        <div class="info">
-          <h4>DAI</h4>
-          <p><b></b></p>
-        </div>
+
       </div>
     </div>
-  </div>
-  
-  <div class="card-local">
-    <table class="table table-dark table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Nombre Completo</th>
-          <th scope="col">Email</th>
-          <th scope="col">Telefono</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of users let i = index">
-          <th scope="row">{{users[i].id}}</th>
-          <td> {{users[i].first_name}}, {{users[i].last_name}}</td>
-          <td> {{users[i].email}}</td>
-          <td>{{users[i].telephone}}</td>
-          <div class="btn-group"> <button (click)="editModal()" class="btn btn-info">EDITAR</button>
-            <button (click)="deleteModal(users[i].id)" class="btn btn-danger">ELIMINAR</button>
-          </div>
+    <div class="description h1 text-center">
+      <h1> USUARIOS</h1>
+    </div>
+    <div class="card-local text-center justify-content-center">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users let i = index">
+            <th scope="row">{{users[i].id}}</th>
+            <td class="font-magic"> {{users[i].first_name}}, {{users[i].last_name}}</td>
+            <td> {{users[i].email}}</td>
+            <td>{{users[i].telephone}}</td>
+            <td>
+              <div class="btn-group"> <button (click)="showModal(users[i].id)" class="btn btn-light a">EDITAR</button>
+                <button (click)="deleteUser(users[i].id)" class="btn btn-danger">ELIMINAR</button>
+              </div>
+            </td>
+          </tr>
 
-        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="description h1 text-center">
+      <h1> SKILLS</h1>
+    </div>
+    <div class="card-local text-center justify-content-center">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Skill Name</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Owner</th>
+        
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let skill of skills let i = index">
+            <th scope="row">{{skill.id}}</th>
+            <td class="font-magic"> {{skill.skill_name}}</td>
+            <td> {{skill.description}}</td>
+            <td></td>
+            <td>
+              <div class="btn-group"> <button (click)="showModalSkill(skill.id)" class="btn btn-light a">EDITAR</button>
+                <button (click)="removeSkill(skill.id)" class="btn btn-danger">ELIMINAR</button>
+              </div>
+            </td>
+          </tr>
 
-      </tbody>
-    </table>
-  </div>
-
-
-
-  <div>
-    <ul class="list-group">
-      <li class="list-group-item">
-
-
-
-      </li>
-
-    </ul>
-  </div>
-</div>
-<!-- Button trigger modal -->
+        </tbody>
+      </table>
+    </div>
+    <app-edit-user-modal *ngIf="show"></app-edit-user-modal>
